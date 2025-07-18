@@ -2,7 +2,9 @@ const { Pool } = require("pg");
 
 const ENV = process.env.NODE_ENV || 'development'
 
-require('dotenv').config({path: `${__dirname}/../.env.${ENV}`})
+const myPath = '/Users/garethwilliamson/Northcoders/northcoders-news-BE/.env.' + ENV;
+
+require('dotenv').config({path: myPath})
 
 const db = new Pool();
 
